@@ -1,7 +1,6 @@
 package com.ust.pos.order.service.impl;
 
 import com.ust.pos.dto.OrderDto;
-import com.ust.pos.dto.UserDto;
 import com.ust.pos.dto.WsDto;
 import com.ust.pos.model.*;
 import com.ust.pos.order.service.OrderService;
@@ -15,8 +14,6 @@ import org.springframework.stereotype.Service;
 import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class OrderServiceImpl implements OrderService {
