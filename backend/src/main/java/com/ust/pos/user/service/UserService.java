@@ -1,0 +1,23 @@
+package com.ust.pos.user.service;
+
+import com.ust.pos.dto.UserDto;
+import com.ust.pos.dto.WsDto;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+public interface UserService {
+    UserDto findByUserName(String username);
+
+    UserDto save(UserDto userDto);
+
+    UserDto update(UserDto userDto);
+
+    boolean delete(String username);
+
+    WsDto<UserDto> findAll(Pageable pageable);
+
+    UserDto updateStatus(String username, boolean status);
+
+    List<UserDto> findAllActive();
+}

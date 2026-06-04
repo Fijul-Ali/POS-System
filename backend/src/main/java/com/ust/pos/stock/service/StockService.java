@@ -1,0 +1,23 @@
+package com.ust.pos.stock.service;
+
+import com.ust.pos.dto.StockDto;
+import com.ust.pos.dto.WsDto;
+import org.springframework.data.domain.Pageable;
+
+import java.util.List;
+
+public interface StockService {
+    StockDto save(StockDto stockDto);
+
+    WsDto<StockDto> findAll(Pageable pageable);
+
+    boolean delete(String identifier);
+
+    StockDto findByIdentifier(String identifier);
+
+    StockDto update(StockDto stockDto);
+
+    List<StockDto> findAllActive();
+
+    StockDto changeStockStatus(String identifier, boolean status);
+}
